@@ -84,4 +84,11 @@ public class StoreController {
 		teamStoreEmployee.setEmployeeId(employeeId);
 		return teamStoreService.saveEmployee(teamStoreId, teamStoreEmployee);
 	}
+	@DeleteMapping("/{teamStoreId}/employee/{employeeId}")
+	public Map<String, String> deleteEmployeeById(@PathVariable Long teamStoreId, @PathVariable Long employeeId,
+			@RequestBody TeamStoreEmployee teamStoreEmployee) {
+		log.info("Removing team store with ID={}", employeeId);
+		teamStoreService.deleteEmployeeById(employeeId, teamStoreId);
+		return Map.of("message", "Successfully deleted team store with ID=" + teamStoreId);
+	}
 }

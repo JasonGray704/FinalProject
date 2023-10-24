@@ -185,6 +185,11 @@ public class TeamStoreService {
 		TeamStore teamStore = findTeamStoreById(teamStoreId);
 		teamStoreDao.delete(teamStore);
 	}
+
+	public void deleteEmployeeById(Long employeeId, Long teamStoreId) {
+		Employee teamStoreEmployee = findEmployeeById(employeeId, teamStoreId);
+		employeeDao.delete(teamStoreEmployee);
+	}
 }
 
 

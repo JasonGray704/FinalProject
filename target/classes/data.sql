@@ -1,1 +1,2 @@
-INSERT INTO customer (customer_first_name, customer_last_name, customer_email) VALUES ('Jason', 'Gray', 'jgray@gmail.com');
+INSERT INTO team_store(team_store_type, team_store_label, team_store_location) VALUES ('Store', 'E31', 'Assembly Hall');
+INSERT INTO customer(customer_first_name, customer_last_name, customer_email) VALUES ('Joe', 'Riley', 'jriley@gmail.com');
